@@ -1,0 +1,36 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.dashboard-sidebar {
+  width: 200px;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+}
+
+.dashboard-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard-sidebar li {
+  margin: 10px 0;
+}
+
+.dashboard-sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.dashboard-sidebar a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+}

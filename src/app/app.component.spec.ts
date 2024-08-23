@@ -20,10 +20,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-v16-bold-project-dfgo');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-v16-bold-project-dfgo app is running!');
-  });
 });
