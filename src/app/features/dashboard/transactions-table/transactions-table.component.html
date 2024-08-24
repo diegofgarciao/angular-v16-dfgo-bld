@@ -1,0 +1,26 @@
+<div class="transactions-table">
+  <div class="filters">
+    <input type="date" class="filter-date" placeholder="Filtrar por fecha">
+    <input type="text" class="filter-search" placeholder="Buscar por palabra">
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Transacción</th>
+        <th>Fecha y Hora</th>
+        <th>Método de Pago</th>
+        <th>ID Transacción</th>
+        <th>Monto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.status }}</td>
+        <td>{{ transaction.createdAt | date:'short' }}</td>
+        <td>{{ transaction.paymentMethod }}</td>
+        <td>{{ transaction.id }}</td>
+        <td>{{ transaction.amount | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,16 @@
+.navbar {
+  background: linear-gradient(90deg, #121E6C, #EE424E);
+  padding: 15px;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}

@@ -6,12 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
-    children: [
-      //{ path: 'pagos', loadChildren: () => import('../payments/payments.module').then(m => m.PaymentsModule) },
-      //{ path: 'datos', loadChildren: () => import('../data/data.module').then(m => m.DataModule) },
-      //{ path: 'configuracion', loadChildren: () => import('../settings/settings.module').then(m => m.SettingsModule) },
-      // Otros módulos adicionales
-    ]
+    children: []
   }
 ];
 
@@ -19,4 +14,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
+
 export class DashboardRoutingModule { }
