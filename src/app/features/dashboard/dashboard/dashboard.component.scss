@@ -209,3 +209,51 @@
   background-color: #C73A46;
 }
 
+/* Estilos para responsive movil*/
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+
+  .filters-and-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduce el espacio entre los elementos en móviles */
+  }
+
+  .total-card-container {
+    width: 100%;
+    flex: none; /* Hace que la tarjeta ocupe el ancho completo */
+    margin-bottom: 10px;
+  }
+
+  .quick-filters {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .filter-button, .filter-select {
+    width: 100%;
+    text-align: center; /* Centra el texto de los botones y selects */
+  }
+
+  .table-container {
+    max-width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+    margin-top: 10px;
+  }
+
+  .table-header {
+    flex-direction: column; /* Cambia la disposición de los elementos en la cabecera de la tabla */
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .search-filter {
+    width: 100%;
+  }
+
+  .search-filter input {
+    width: calc(100% - 20px); /* Hace que el input ocupe casi todo el ancho disponible */
+  }
+}

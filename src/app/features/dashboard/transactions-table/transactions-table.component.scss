@@ -21,3 +21,25 @@ th {
 td {
   color: #606060;
 }
+
+@media (max-width: 768px) {
+  .transactions-table {
+    width: 100%;
+    overflow-x: auto; /* Permite el scroll horizontal si la tabla es más ancha que la pantalla */
+    -webkit-overflow-scrolling: touch; /* Mejora la experiencia de desplazamiento en dispositivos móviles */
+  }
+
+  table {
+    width: 100%;
+    display: block; /* Hace que la tabla sea un bloque para manejar mejor el overflow */
+  }
+
+  th, td {
+    padding: 10px;
+    font-size: 14px; /* Reduce el tamaño del texto para pantallas pequeñas */
+  }
+
+  th, td {
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  }
+}
