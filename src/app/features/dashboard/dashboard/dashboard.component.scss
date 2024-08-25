@@ -1,36 +1,211 @@
+
+/* CSS Base para Dashboard */
+
 .dashboard-container {
+  padding: 20px;
+}
+
+.content-wrapper {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.dashboard-sidebar {
-  width: 200px;
-  background-color: #343a40;
+/* CSS Base para Filtros de fechas y tarjeta de total */
+
+.filters-and-card {
+  display: flex;
+  justify-content: center; /* Alinear los elementos al inicio */
+  align-items: stretch; /* Asegura que los elementos se estiren y alineen en altura */
+  gap: 20px; /* Reducir el espacio entre la tarjeta y los filtros */
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* CSS Base tarjeta de total */
+
+.total-card-container {
+  flex: 0.5; /* Permite que la tarjeta ocupe todo el espacio disponible a la izquierda */
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;/* Asegura que el contenido dentro de la tarjeta esté bien alineado */
+}
+
+.total-card-title {
+  background: linear-gradient(90deg, #121E6C, #EE424E);
+  padding: 10px 20px;
   color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.total-card {
   padding: 20px;
+  flex: 1; /* Asegura que el contenido de la tarjeta ocupe el espacio disponible */
 }
 
-.dashboard-sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.dashboard-sidebar li {
-  margin: 10px 0;
-}
-
-.dashboard-sidebar a {
-  color: white;
-  text-decoration: none;
-}
-
-.dashboard-sidebar a.active {
+.total-amount {
+  font-size: 24px;
   font-weight: bold;
-  text-decoration: underline;
+  color: #121E6C; /* Azul oscuro */
+  margin-bottom: 10px;
 }
 
-.dashboard-content {
-  flex: 1;
-  padding: 20px;
-  background-color: #f8f9fa;
+.total-date {
+  font-size: 16px;
+  color: #606060; /* Gris oscuro */
 }
+
+/* CSS Base para Filtros de fechas */
+.quick-filters {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinear los filtros al inicio */
+  gap: 10px; /* Espaciado entre los botones de filtro */
+}
+
+.filter-button, .filter-select {
+  padding: 10px 20px;
+  background-color: #f6f4f9; /* Fondo claro similar al que has mostrado */
+  border: none;
+  border-radius: 50px; /* Hacer los bordes completamente redondeados */
+  color: #606060; /* Gris oscuro para el texto */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto de elevación */
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover, .filter-select:hover {
+  background-color: #e0e0e0; /* Fondo más oscuro al hacer hover */
+}
+
+.filter-select {
+  padding: 10px 15px; /* Ajustar el padding del select para coincidir con los botones */
+  background-color: #f6f4f9; /* Fondo claro */
+  border: none;
+  border-radius: 50px;
+  color: #606060;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  appearance: none; /* Elimina la flecha predeterminada del select en algunos navegadores */
+}
+
+.filter-select::after {
+  content: "▼"; /* Flecha personalizada */
+  font-size: 12px;
+  color: #606060;
+  margin-left: 10px;
+}
+
+/* Estilos para el contenedor de la tabla */
+.table-container {
+  width: 100%;
+  max-width: 90%; /* Ajustar el ancho para cubrir casi toda la pantalla */
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden; /* Asegura que el borde del título se alinee bien */
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #121E6C, #EE424E);
+  padding: 10px 20px;
+}
+
+.table-title {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+
+
+/* Estilos para filtro buscador */
+.search-filter {
+  margin: 0;
+}
+
+.search-filter input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Estilos para filtro por tipo de pago */
+.filter-type-button {
+  background-color: #F3F3F3;
+  color: #121E6C;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #0D1656;
+}
+
+.filter-type-icon {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.filter-type-menu {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  z-index: 1000;
+  width: 250px;
+}
+
+.filter-type-options label {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #606060;
+}
+
+.apply-filter-type-button {
+  background-color: #EE424E;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.apply-filter-type-button:hover {
+  background-color: #C73A46;
+}
+
