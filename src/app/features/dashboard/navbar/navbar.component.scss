@@ -1,11 +1,26 @@
 .navbar {
   background: linear-gradient(90deg, #121E6C, #EE424E);
   padding: 15px;
+  margin: 0;
 }
 
 .navbar-content {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-logo {
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .navbar-link {
@@ -13,4 +28,5 @@
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  margin-left: 20px;
 }

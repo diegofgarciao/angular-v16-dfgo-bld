@@ -1,8 +1,52 @@
-DashboardWorks
 <div class="dashboard-container">
   <app-navbar></app-navbar>
   <div class="content-wrapper">
-    <app-total-card></app-total-card>
-    <app-transactions-table></app-transactions-table>
+    <div class="filters-and-card">
+      <div class="total-card-container">
+        <h3 class="total-card-title">Total de ventas filtro seleccionado</h3>
+        <div class="total-card">
+          <p class="total-amount">{{ totalAmount | currency }}</p>
+          <p class="total-date">{{ totalDateRange }}</p>
+        </div>
+      </div>
+      <div class="quick-filters">
+        <button class="filter-button" (click)="filterByDate('today')">Hoy</button>
+        <button class="filter-button" (click)="filterByDate('thisWeek')">Esta semana</button>
+        <select class="filter-select" (change)="filterByMonth($event)">
+          <option value="">Mes</option>
+          <option *ngFor="let month of months" [value]="month.value">{{ month.name }}</option>
+        </select>
+        <button (click)="toggleFilterMenu()" class="filter-button">
+          <img src="assets/icons/filter-icon.png" alt="Filtrar" class="filter-type-icon"> Filtrar
+        </button>
+
+        <!-- Filtro de opciones -->
+        <div *ngIf="showFilterMenu" class="filter-type-menu">
+          <h4>Filtrar</h4>
+          <div class="filter-type-options">
+            <label>
+              <input type="checkbox" [(ngModel)]="filterOptions.TERMINAL"> Cobro con datáfono
+            </label>
+            <label>
+              <input type="checkbox" [(ngModel)]="filterOptions.PAYMENT_LINK"> Cobro con link de pago
+            </label>
+            <label>
+              <input type="checkbox" [(ngModel)]="filterOptions.all"> Ver todos
+            </label>
+          </div>
+          <button class="apply-filter-type-button" (click)="applyFilters()">Aplicar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <div class="table-header">
+        <h3 class="table-title">Transacciones</h3>
+        <div class="search-filter">
+          <input type="text" placeholder="Buscar por palabra" (input)="filterBySearch($event)" />
+        </div>
+      </div>
+      <app-transactions-table [transactions]="filteredTransactions"></app-transactions-table>
+    </div>
   </div>
 </div>

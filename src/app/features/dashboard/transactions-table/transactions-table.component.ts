@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TransactionsService } from './transactions.service';
 import { Transaction } from './transaction.model';
 
@@ -8,16 +8,6 @@ import { Transaction } from './transaction.model';
   styleUrls: ['./transactions-table.component.scss']
 })
 
-export class TransactionsTableComponent implements OnInit {
-  transactions: Transaction[] = [];
-
-  constructor(private transactionsService: TransactionsService) { }
-
-  ngOnInit(): void {
-    console.log('im living!!!!!!')
-    this.transactionsService.getTransactions().subscribe(data => {
-      this.transactions = data;
-      console.log(this.transactions)
-    });
-  }
+export class TransactionsTableComponent {
+  @Input() transactions: Transaction[] = [];
 }
