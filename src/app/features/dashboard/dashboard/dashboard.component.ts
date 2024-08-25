@@ -21,10 +21,10 @@ export class DashboardComponent implements OnInit {
     all: true,
   };
 
-  private selectedFilter: string = 'Todas las transacciones';
-  private selectedDateRange: string = '';
-  private selectedMonth: string = '';
-  private selectedDateFilter: string = '';
+  public selectedFilter: string = 'Todas las transacciones';
+  public selectedDateRange: string = '';
+  public selectedMonth: string = '';
+  public selectedDateFilter: string = '';
 
   constructor(private transactionsService: TransactionsService) {}
 
