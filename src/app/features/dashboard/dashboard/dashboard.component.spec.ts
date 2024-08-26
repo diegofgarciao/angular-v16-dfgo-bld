@@ -26,7 +26,6 @@ describe('DashboardComponent', () => {
 
   it('ngOnInit should call getTransactions and initialize values', () => {
     component.ngOnInit();
-
     expect(service.getTransactions).toBeDefined();
     expect(component.transactions.length).toBe(1);
     expect(component.filteredTransactions.length).toBe(1);

@@ -1,27 +1,38 @@
-# AngularV16BoldProjectDfgo
+# Proyecto Caso practico Frontend Enginner Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+### Realizado por
 
-## Development server
+| Nombre               | Correo                    |
+|----------------------|---------------------------|
+|Diego F. Garcia Ortega|diegofgarciao@gmail.com    |
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Objetivo del proyecto
+El objetivo de esta prueba es desarrollar un dashboard que liste las transacciones realizadas en un comercio, permitiendo poder revisar el detalle de cada transacción además de realizar filtros por fecha y por tipo de transacción y buscar por cualquier parámetro de la tabla.
+![boldEjercicio](image.png)
 
-## Code scaffolding
+### Algunos Requisitos tecnicos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Manejo de colores
+    Azul: #121E6C
+    Rojo: #EE424E
+    Gris oscuro: #606060
+    Gris claro: #F3F3F3
+    Color background: #F6F4F9
+- Media Queries para hacer que el diseño sea responsive en pantallas pequeñas
+- Consumo de endpoit https://bold-fe-api.vercel.app/api
 
-## Build
+## Proyecto AngularV16BoldProjectDfgo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) versión 16.2.14.
 
-## Running unit tests
+## Servidor de desarrollo
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecuta `ng serve` para iniciar un servidor de desarrollo. Luego, navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si realizas cambios en los archivos fuente.
 
-## Running end-to-end tests
+## Ejecución de pruebas unitarias
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para ejecutar las pruebas unitarias, utiliza el comando `ng test`, el cual ejecutará las pruebas a través de [Karma](https://karma-runner.github.io).
 
-## Further help
+## Construcción del proyecto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ejecuta `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`.
