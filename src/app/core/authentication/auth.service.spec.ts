@@ -33,4 +33,5 @@ describe('AuthService', () => {
     service.logout();
     expect(service.isLoggedIn()).toBeFalse();
   });
+
 });

@@ -1,6 +1,5 @@
 
-/* CSS Base para Dashboard */
-
+/************ CSS Base para Dashboard ************/
 .dashboard-container {
   padding: 0px;
 }
@@ -12,7 +11,7 @@
   width: 100%;
 }
 
-/* CSS Base para Filtros de fechas y tarjeta de total */
+/************ CSS Base para Filtros de fechas y tarjeta de total ************/
 .filters-and-card {
   display: flex;
   justify-content: center;
@@ -23,7 +22,7 @@
   margin-top: 20px;
 }
 
-/* CSS Base tarjeta de total */
+/************ CSS Base tarjeta de total ************/
 .total-card-container {
   flex: 0.5;
   background-color: #ffffff;
@@ -60,7 +59,7 @@
   color: #606060;
 }
 
-/* CSS Base para Filtros de fechas */
+/************ CSS Base para Filtros de fechas ************/
 .quick-filters {
   display: flex;
   align-items: center;
@@ -104,7 +103,7 @@
   margin-left: 10px;
 }
 
-/* Estilos para el contenedor de la tabla */
+/************ Estilos para el contenedor de la tabla ************/
 .table-container {
   width: 100%;
   max-width: 90%;
@@ -131,7 +130,7 @@
 }
 
 
-/* Estilos para filtro buscador */
+/************ Estilos para filtro buscador ************/
 .search-filter {
   margin: 0;
 }
@@ -144,7 +143,7 @@
 }
 
 
-/* Estilos para filtro por tipo de pago */
+/************ Estilos para filtro por tipo de pago ************/
 .filter-type-button {
   background-color: #F3F3F3;
   color: #121E6C;
@@ -206,7 +205,7 @@
   background-color: #C73A46;
 }
 
-/* Estilo para el tooltip */
+/************ Estilo para el tooltip ************/
 .icon-circle {
   display: inline-block;
   width: 20px;
@@ -223,7 +222,7 @@
   z-index: 101;
 }
 
-/* Estilo del texto del tooltip */
+/************ Estilo del texto del tooltip ************/
 .tooltip-text {
   visibility: hidden;
   width: 150px;
@@ -248,8 +247,7 @@
   opacity: 1;
 }
 
-
-/* Estilos para responsive movil*/
+/************ Estilos para responsive movil************/
 @media (max-width: 768px) {
   .dashboard-container {
     padding: 10px;
@@ -258,12 +256,12 @@
   .filters-and-card {
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Reduce el espacio entre los elementos en móviles */
+    gap: 10px;
   }
 
   .total-card-container {
     width: 100%;
-    flex: none; /* Hace que la tarjeta ocupe el ancho completo */
+    flex: none;
     margin-bottom: 10px;
   }
 
@@ -275,16 +273,16 @@
 
   .filter-button, .filter-select {
     width: 100%;
-    text-align: center; /* Centra el texto de los botones y selects */
+    text-align: center;
   }
 
   .table-container {
-    max-width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+    max-width: 100%;
     margin-top: 10px;
   }
 
   .table-header {
-    flex-direction: column; /* Cambia la disposición de los elementos en la cabecera de la tabla */
+    flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
@@ -294,6 +292,6 @@
   }
 
   .search-filter input {
-    width: calc(100% - 20px); /* Hace que el input ocupe casi todo el ancho disponible */
+    width: calc(100% - 20px);
   }
 }
