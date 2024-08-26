@@ -80,13 +80,11 @@ export class DashboardComponent implements OnInit {
 
   calculateTotal(): void {
     this.totalAmount = this.filteredTransactions.reduce(
-      (sum, transaction) => sum + transaction.amount,
-      0
+      (sum, transaction) => sum + transaction.amount, 0
     );
   }
 
   applyFilters(): void {
-    // Aplica el filtro de fecha primero
     if (this.selectedDateFilter) {
       const now = moment();
 
@@ -117,7 +115,6 @@ export class DashboardComponent implements OnInit {
       this.selectedDateRange = '';
     }
 
-    // Ahora aplica el filtro de método de pago
     if (!this.filterOptions.all) {
       this.filteredTransactions = this.filteredTransactions.filter(
         (transaction) => {
@@ -142,9 +139,9 @@ export class DashboardComponent implements OnInit {
       this.selectedFilter = 'Todas las transacciones';
     }
 
-    this.calculateTotal(); // Recalcula el total después de aplicar los filtros
-    this.updateTotalDateRange(); // Actualiza la visualización con la fecha y el filtro aplicados
-    this.showFilterMenu = false; // Oculta el menú de filtros después de aplicar
+    this.calculateTotal();
+    this.updateTotalDateRange();
+    this.showFilterMenu = false;
   }
 
   updateTotalDateRange(): void {
@@ -156,13 +153,13 @@ export class DashboardComponent implements OnInit {
 
   getDateRangeText(filter?: string): string {
     if (filter === 'today') {
-      return moment().format('MMMM Do YYYY'); // Ej: "agosto 23 2024"
+      return moment().format('MMMM Do YYYY');
     } else if (filter === 'thisWeek') {
       const startOfWeek = moment().startOf('week').format('MMMM Do');
       const endOfWeek = moment().endOf('week').format('MMMM Do YYYY');
-      return `${startOfWeek} - ${endOfWeek}`; // Ej: "agosto 21 - agosto 27 2024"
+      return `${startOfWeek} - ${endOfWeek}`;
     } else if (filter === 'thisMonth') {
-      return moment().format('MMMM YYYY'); // Ej: "agosto 2024"
+      return moment().format('MMMM YYYY');
     }
     return '';
   }

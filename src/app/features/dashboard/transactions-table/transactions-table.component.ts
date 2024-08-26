@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { TransactionsService } from './transactions.service';
+import { Component, Input } from '@angular/core';
 import { Transaction } from './transaction.model';
 
 @Component({
@@ -9,5 +8,15 @@ import { Transaction } from './transaction.model';
 })
 
 export class TransactionsTableComponent {
+  selectedTransaction: Transaction | null = null;
+
   @Input() transactions: Transaction[] = [];
+
+  openModal(transaction: Transaction) {
+    this.selectedTransaction = transaction;
+  }
+
+  closeModal() {
+    this.selectedTransaction = null;
+  }
 }
