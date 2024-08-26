@@ -25,6 +25,11 @@ El objetivo de esta prueba es desarrollar un dashboard que liste las transaccion
 
 Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) versión 16.2.14.
 
+## Usuarios de prueba Login
+
+- usuario: user
+- contraseña: password
+
 ## Servidor de desarrollo
 
 Ejecuta `ng serve` para iniciar un servidor de desarrollo. Luego, navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si realizas cambios en los archivos fuente.
