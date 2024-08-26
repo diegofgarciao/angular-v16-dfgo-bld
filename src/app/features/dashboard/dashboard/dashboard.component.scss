@@ -2,7 +2,7 @@
 /* CSS Base para Dashboard */
 
 .dashboard-container {
-  padding: 20px;
+  padding: 0px;
 }
 
 .content-wrapper {
@@ -13,27 +13,25 @@
 }
 
 /* CSS Base para Filtros de fechas y tarjeta de total */
-
 .filters-and-card {
   display: flex;
-  justify-content: center; /* Alinear los elementos al inicio */
-  align-items: stretch; /* Asegura que los elementos se estiren y alineen en altura */
-  gap: 20px; /* Reducir el espacio entre la tarjeta y los filtros */
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
   width: 100%;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
 /* CSS Base tarjeta de total */
-
 .total-card-container {
-  flex: 0.5; /* Permite que la tarjeta ocupe todo el espacio disponible a la izquierda */
+  flex: 0.5;
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;/* Asegura que el contenido dentro de la tarjeta esté bien alineado */
+  flex-direction: column;
 }
 
 .total-card-title {
@@ -47,60 +45,60 @@
 
 .total-card {
   padding: 20px;
-  flex: 1; /* Asegura que el contenido de la tarjeta ocupe el espacio disponible */
+  flex: 1;
 }
 
 .total-amount {
   font-size: 24px;
   font-weight: bold;
-  color: #121E6C; /* Azul oscuro */
+  color: #121E6C;
   margin-bottom: 10px;
 }
 
 .total-date {
   font-size: 16px;
-  color: #606060; /* Gris oscuro */
+  color: #606060;
 }
 
 /* CSS Base para Filtros de fechas */
 .quick-filters {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alinear los filtros al inicio */
-  gap: 10px; /* Espaciado entre los botones de filtro */
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .filter-button, .filter-select {
   padding: 10px 20px;
-  background-color: #f6f4f9; /* Fondo claro similar al que has mostrado */
-  border: none;
-  border-radius: 50px; /* Hacer los bordes completamente redondeados */
-  color: #606060; /* Gris oscuro para el texto */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto de elevación */
-  transition: background-color 0.3s ease;
-}
-
-.filter-button:hover, .filter-select:hover {
-  background-color: #e0e0e0; /* Fondo más oscuro al hacer hover */
-}
-
-.filter-select {
-  padding: 10px 15px; /* Ajustar el padding del select para coincidir con los botones */
-  background-color: #f6f4f9; /* Fondo claro */
+  background-color: #f6f4f9;
   border: none;
   border-radius: 50px;
   color: #606060;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  appearance: none; /* Elimina la flecha predeterminada del select en algunos navegadores */
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover, .filter-select:hover {
+  background-color: #e0e0e0;
+}
+
+.filter-select {
+  padding: 10px 15px;
+  background-color: #f6f4f9;
+  border: none;
+  border-radius: 50px;
+  color: #606060;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  appearance: none;
 }
 
 .filter-select::after {
-  content: "▼"; /* Flecha personalizada */
+  content: "▼";
   font-size: 12px;
   color: #606060;
   margin-left: 10px;
@@ -109,12 +107,12 @@
 /* Estilos para el contenedor de la tabla */
 .table-container {
   width: 100%;
-  max-width: 90%; /* Ajustar el ancho para cubrir casi toda la pantalla */
+  max-width: 90%;
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 10px;
   margin-top: 20px;
-  overflow: hidden; /* Asegura que el borde del título se alinee bien */
+  overflow: hidden;
 }
 
 .table-header {
@@ -131,7 +129,6 @@
   font-size: 18px;
   margin: 0;
 }
-
 
 
 /* Estilos para filtro buscador */
@@ -250,6 +247,7 @@
   visibility: visible;
   opacity: 1;
 }
+
 
 /* Estilos para responsive movil*/
 @media (max-width: 768px) {

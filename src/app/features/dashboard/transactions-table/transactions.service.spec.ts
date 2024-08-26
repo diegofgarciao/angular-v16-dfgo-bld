@@ -18,7 +18,7 @@ describe('TransactionsService', () => {
   });
 
   afterEach(() => {
-    httpMock.verify(); // Verifica que no haya solicitudes pendientes
+    httpMock.verify();
   });
 
   it('should be created', () => {
@@ -54,6 +54,7 @@ describe('TransactionsService', () => {
 
     const req = httpMock.expectOne('https://bold-fe-api.vercel.app/api');
     expect(req.request.method).toBe('GET');
-    req.flush({ data: dummyTransactions }); // Emula la respuesta del backend
+    req.flush({ data: dummyTransactions });
   });
+
 });

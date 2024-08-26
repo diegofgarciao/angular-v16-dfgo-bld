@@ -1,0 +1,24 @@
+<div class="modal-background" (click)="closeModal()">
+<div class="modal-content">
+  <div class="modal-header">
+    <img *ngIf="transaction?.status === 'SUCCESSFUL'" src="assets/icons/success-icon.png" alt="Éxito" class="status-icon">
+  <img *ngIf="transaction?.status !== 'SUCCESSFUL'" src="assets/icons/fail-icon.png" alt="Fallo" class="status-icon">
+    <h2>{{ transaction?.status === 'SUCCESSFUL' ? '¡Cobro exitoso!' : 'Cobro fallido' }}</h2>
+    <span class="close-icon" (click)="closeModal()">&#10005;</span>
+  </div>
+
+  <div class="modal-prebody">
+    <p class="modal-amount">{{ transaction?.amount | currency }}</p>
+    <p class="modal-date">{{ transaction?.createdAt | date:'short' }}</p>
+  </div>
+
+
+  <div class="modal-body">
+    <p><strong>ID transacción Bold:</strong> {{ transaction?.id }}</p>
+    <p><strong>Referencia Bold:</strong> <span class="referenceBold"> -{{ transaction?.deduction | currency }}</span></p>
+    <hr />
+    <p><strong>Método de pago:</strong> <span class="payment-method"> <img src="assets/icons/metodoPago.png" alt="payment method" /> {{ transaction?.paymentMethod }}</span></p>
+    <p><strong>Tipo de pago:</strong> {{ transaction?.salesType }}</p>
+  </div>
+</div>
+</div>

@@ -6,12 +6,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TransactionsTableComponent } from './transactions-table/transactions-table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TransactionDetailsModalComponent } from './transaction-details-modal/transaction-details-modal.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     NavbarComponent,
-    TransactionsTableComponent
+    TransactionsTableComponent,
+    TransactionDetailsModalComponent
   ],
   imports: [
     CommonModule,

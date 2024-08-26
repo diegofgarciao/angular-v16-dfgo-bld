@@ -1,0 +1,126 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5%;
+}
+
+.modal-content.show {
+  transform: translateX(0);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.close-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-prebody {
+  padding-bottom: 50px;
+}
+
+.modal-amount, .modal-date {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+}
+
+.referenceBold {
+  color: #EE424E;
+}
+
+.payment-method img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.status-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+
+.modal-body p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.modal-body p strong {
+  text-align: left;
+}
+
+.modal-body p span {
+  text-align: right;
+}
+
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    top: 5%;
+    right: 2%;
+    left: 2%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-amount, .modal-date {
+    text-align: center;
+    width: 100%;
+  }
+
+  .modal-body p {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-body p strong, .modal-body p span {
+    text-align: center;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+}

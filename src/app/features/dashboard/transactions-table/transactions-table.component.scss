@@ -5,6 +5,7 @@
 table {
   width: 100%;
   border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
 }
 
 th, td {
@@ -22,24 +23,31 @@ td {
   color: #606060;
 }
 
+.clickable {
+  cursor: pointer;
+  color: #121E6C;
+  text-decoration: underline;
+}
+
+
 @media (max-width: 768px) {
   .transactions-table {
     width: 100%;
-    overflow-x: auto; /* Permite el scroll horizontal si la tabla es más ancha que la pantalla */
-    -webkit-overflow-scrolling: touch; /* Mejora la experiencia de desplazamiento en dispositivos móviles */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   table {
     width: 100%;
-    display: block; /* Hace que la tabla sea un bloque para manejar mejor el overflow */
+    display: block;
   }
 
   th, td {
     padding: 10px;
-    font-size: 14px; /* Reduce el tamaño del texto para pantallas pequeñas */
+    font-size: 14px;
   }
 
   th, td {
-    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    white-space: nowrap;
   }
 }
