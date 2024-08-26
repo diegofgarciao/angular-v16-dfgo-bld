@@ -3,11 +3,18 @@
   <div class="content-wrapper">
     <div class="filters-and-card">
       <div class="total-card-container">
-        <h3 class="total-card-title">Total de ventas filtro seleccionado</h3>
+        <div class="total-card-title">
+          Total de ventas filtro seleccionado
+          <span class="tooltip-icon">
+            <span class="icon-circle">i</span>
+            <span class="tooltip-text">Este es el monto total calculado en base a las transacciones filtradas.</span>
+          </span>
+        </div>
         <div class="total-card">
           <p class="total-amount">{{ totalAmount | currency }}</p>
           <p class="total-date">{{ totalDateRange }}</p>
         </div>
+
       </div>
       <div class="quick-filters">
         <button class="filter-button" (click)="filterByDate('today')">Hoy</button>
